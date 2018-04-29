@@ -1,0 +1,117 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+	abriel_female 	= {
+		entity = "humanoid_05_female_01_entity"
+		clothes_selector = "abriel_female_clothes"
+		hair_selector = "abriel_female_hair"
+		greeting_sound = "humanoid_female_greeting_a"
+		character_textures = {
+			"gfx/models/portraits/abriel/abriel_female_body_01.dds"
+		}
+	}
+	abriel_male 	= {
+		entity = "humanoid_05_male_01_entity"
+		clothes_selector = "abriel_male_clothes"
+		hair_selector = "abriel_male_hair"
+		greeting_sound = "humanoid_male_greeting_d" 
+		character_textures = {
+			"gfx/models/portraits/abriel/abriel_male_body_01.dds"
+		}
+	}	
+	
+}
+
+portrait_groups = {
+	abriel = {
+		default = abriel_female
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					abriel_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					abriel_female
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					abriel_female
+					abriel_male
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					abriel_female
+					abriel_male
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					abriel_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					abriel_male
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					abriel_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					abriel_male
+				}
+			}
+		}
+	}
+}

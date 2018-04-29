@@ -1,0 +1,103 @@
+
+gov_abh_empire = {
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = no
+
+	possible = {
+		has_authority = auth_abh_empire
+		has_civic = civic_abriel_domination
+		has_civic = civic_abh_society	
+		has_ethic = ethic_egalitarian
+		has_ethic = ethic_militarist
+		has_ethic = ethic_materialist
+	}
+
+	weight = {
+		base = 100000
+	}
+
+	election_candidates = {	
+		base = 100
+		modifier = {
+			factor = 10
+			species = {
+				species_is_abriel = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			has_level > 4
+		}
+		modifier = {
+			factor = 2
+			has_level > 3
+		}
+		modifier = {
+			factor = 2
+			has_level > 2
+		}
+		modifier = {
+			factor = 2
+			has_level > 1
+		}
+		modifier = {
+			factor = 4
+			leader_class = admiral
+		}
+		modifier = {
+			factor = 3
+			leader_class = general
+		}
+		modifier = {
+			factor = 2
+			leader_class = governor
+		}
+		modifier = {
+			factor = 1
+			leader_class = scientist
+		}
+		modifier = {
+			factor = 0
+			species = {
+				species_is_abriel = no
+			}
+		}
+		modifier = {
+			factor = 0
+			leader_class = ruler
+		}
+		modifier = {
+			factor = 0
+			has_leader_flag = was_ruler
+		}
+	}
+}
+
+gov_abh_kingdom = {
+	ruler_title = RT_KING
+	ruler_title_female = RT_QUEEN
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+
+	use_regnal_names = yes
+	dynastic_last_names = yes
+
+	possible = {
+		has_authority = auth_abh_kingdom
+		has_civic = civic_abriel_domination
+		has_civic = civic_abh_society	
+		has_ethic = ethic_authoritarian
+		has_ethic = ethic_pacifist
+		has_ethic = ethic_materialist
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+

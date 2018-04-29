@@ -1,0 +1,119 @@
+planet_is_big_abh_hab = {
+	planet_is_not_abh_hab = no
+	planet_size > 2
+}
+
+planet_is_small_abh_hab = {
+	planet_is_not_abh_hab = no
+	planet_size < 3
+}
+
+
+planet_is_not_abh_hab = {
+	NOR = {
+		is_planet_class = pc_abh_habitat
+		is_planet_class = pc_imperial_habitat
+		is_planet_class = pc_abh_ring_habitable
+	}
+}
+
+species_is_abriel = {
+	has_trait = trait_abriel_supremacy
+	has_trait = trait_abh_physiology
+	has_trait = trait_abh_psychology
+}
+
+species_is_abh = {
+	NOT = {
+		has_trait = trait_abriel_supremacy
+	}
+	has_trait = trait_abh_physiology
+	has_trait = trait_abh_psychology
+}
+
+species_is_imperial = {
+	NOT = {
+		has_trait = trait_abriel_supremacy
+		has_trait = trait_abh_physiology
+	}
+	has_trait = trait_abh_psychology
+}
+
+abh_species_has_new_blood = {
+#	any_owned_pop = {
+#		species_is_abh = yes
+#		has_trait = trait_new_blood
+#	}
+	has_country_flag = abh_new_blood
+}
+
+imperial_species_has_new_blood = {
+#	any_owned_pop = {
+#		species_is_imperial = yes
+#		has_trait = trait_new_blood
+#	}
+	has_country_flag = imperial_new_blood
+}
+
+planet_is_biggest_abh_hab = {
+	planet_is_not_abh_hab = no
+	NOT = {
+		owner = {
+			any_owned_planet = {
+				planet_is_not_abh_hab = no
+				planet_size > prevprev.planet_size
+			}
+		}
+	}
+}
+
+country_is_abh_kingdom = {
+	OR = {
+		is_country = event_target:skiil_kingdom
+		is_country = event_target:ilysr_kingdom
+		is_country = event_target:larych_kingdom
+		is_country = event_target:wesko_kingdom
+		is_country = event_target:barke_kingdom
+		is_country = event_target:balzede_kingdom
+		is_country = event_target:siullzede_kingdom
+		is_country = event_target:kryb_kingdom
+	}
+}
+
+exists_abh_empire = {
+	exists = event_target:abh_empire
+}
+
+exists_full_set_of_abh_kingdoms = {
+	exists = event_target:skiil_kingdom
+	exists = event_target:ilysr_kingdom
+	exists = event_target:larych_kingdom
+	exists = event_target:wesko_kingdom
+	exists = event_target:barke_kingdom
+	exists = event_target:balzede_kingdom
+	exists = event_target:siullzede_kingdom
+	exists = event_target:kryb_kingdom
+}
+
+country_is_abh_empire = {
+	is_country = event_target:abh_empire
+}
+
+country_is_abh_state = {
+	OR = {
+		country_is_abh_kingdom = yes
+		country_is_abh_empire = yes
+	}
+}
+
+country_is_smallest_non_player_abh_kingdom = {
+	country_is_abh_kingdom = yes
+	is_ai = yes
+	NOT = {
+		any_playable_country = {
+			country_is_abh_kingdom = yes
+			is_ai = yes
+			num_pops < prev.num_pops
+		}
+	}
+}

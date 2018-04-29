@@ -1,0 +1,122 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+	# Human
+	abh_female = {
+		entity = "portrait_human_female_01_entity"
+		clothes_selector = "abh_female_clothes"
+		hair_selector = "abh_female_hair"
+		greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/abh/abh_female_body_01.dds"
+		}
+	}
+	abh_male = {
+		entity = "portrait_human_male_01_entity"
+		clothes_selector = "abh_male_clothes"
+		hair_selector = "abh_male_hair"
+		greeting_sound = "human_male_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/abh/abh_male_body_01.dds"
+		}
+	}	
+	
+}
+
+portrait_groups = {
+	abh = {
+		default = abh_female
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					abh_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					abh_female
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					abh_female
+					abh_male
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					abh_female
+					abh_male
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					abh_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					abh_male
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					abh_female
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					abh_male
+				}
+			}
+		}
+	}
+}

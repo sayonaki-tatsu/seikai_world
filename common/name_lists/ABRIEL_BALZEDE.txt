@@ -1,0 +1,205 @@
+﻿abriel_balzede = {
+	### SHIPS
+	selectable = { always = no }
+	alias = "abriel_balzede"
+	randomized = no
+
+	ship_names = {
+
+#		generic = {
+#			random_names = { Ittal Nidab Ninki Sidur Mammet Meta Ninli Puaba Etum Nidur Inlit Sabi Artetu Lila Nidab Saba Lisid Arteshki Nannu Ayabis Nocri Lili Nannu Ninla Ayannal Abis Myli Lila Sili Sila Myla Meta Etum Eshkit Ayammeshki Nidur Nidab Ningal Abit Lili Nidur Lili Sila Nisid Ittal Sidur Puaba Nisil Ingal Ninki }
+#		}
+
+		corvette = {
+			Alsook Matau Numi Wapi Seged Kausue Seki Hogun Sooluss Matwau Abun Powa Annook Matwa Koodie Kuwhi Wosue Apik Amokw Awomps Kita Makki Meese Kanu Kause Assun Minu Cheme Askoon Chewau Nonu Siteau Mewa Sewa Mingun Tahi Mekluss Wawau Chemi Mati
+		}
+		
+		destroyer = {
+			Naba Ahah Hoke Ahoh Anin Niichi Digha Tohiye Baheii Siche Johi Nahi Ahil Tseli Shalna Naaba Tsintib Ahkyoh Dighiye Yaweeh Hili Tsidi Haadi Ahkyol Naalni Joheii Nastoh Sichiye Yalneh Alneh Tsintoh Naalna Sane Niyoli Shastah Shoma Atah Joha Sicha Tsahi
+		}
+		
+		cruiser = {
+			Mata Cheta Kote Mahka Zitka Kayawa Dowa Anan Alon Tecaw Taha Sanwee Mani Wambla Ikan Chapa Chiwee Magee Skawee Chato Skaha Odah Mela Wicas Wahchi Tata Hapi Hatay Wana Owan Kota Skala Zitka Kangee Chapa Kaha Owah Michi Otah Teeta
+		}
+		
+		battleship = {
+			Toka Toko Sikaya Attaq Artok Mani Annik Torva Nagai Tite Tuyoku Toka Akaq Naka Neka Kikti Irdlik Ciaria Aviq Yanak Taqiia Avit Palu Nuqiia Tuyokaya Piktu Qimma Ipaq Takma Imuq Koni Kila Kulri Neqiia Akpiq Aumiak Kiaka Artok Qeorva Niqiia
+		}
+		
+		science = {
+			Newton Einstein Bohr Darwin Pasteur Galilei Lavoisier Kepler Copernicus Faraday Maxwell Bernard Boas Heisenberg Pauling Virchow Schrodinger Rutherford Dirac Vesalius Brahe Buffon Boltzmann Planck Curie Herschel Lyell Laplace Hubble Thomson Born Crick Fermi Euler Liebig Eddington Harvey Malpighi Huygens Gauss
+		}
+		
+		colonizer = {
+			Acor Cuilla Chuaca Quispe Quilo Cusa Sisuyo Sica Chuarca Collque Curua Mamay Huaco Coca Humbo Usill Marca Axill Rica Sira Curua Sisuyo Maxi Quispu Usill Cusa Toctu Cusi Choque Cusuyo Urmas Aruas Chumbo Cara Chumbi Chuaca Siza Cocay Quispu Ilan
+		}
+		
+		constructor = {
+			Etlacancuein Tlillinaco Quauhxuchitli Acaxochitl Caonenopo Tlocueitlaxoch Malmaloco Ihuaxototl Tlaxochuatli Tototli Xochitlaxoch Antihualxotl Axiuchitl Talcauaxoche Ochimalxotl Ihuazcan Tlancihitli Totlancihe Teotinetzin Teotiacuichpo Chalchimana Macapantzin Capantzina Acahuatzitl Acapatzitl Imacantzitl Cacamaco Ilochitl Xochitlaxoch Totinena Palxochitli Acacauantzin Alxoxochin Malmalilli Capantotiac Tacapantzin Talcihitli Cihitlaco Tiacaxoche Manacapo
+		}
+
+		mining_station = { }
+		research_station = { }
+		
+		#terraform_station = { }
+		
+		military_station_small = {
+			Ruc Aimh Lomh Loepoess Dachoc Aislairec Biboth Kilych Idaimh Nych Lobitec Fimegaimec Kalyc Dabaimec Losaich Tlaimh Sosiec Spaurh Aimenyrh Snoech Sarrych Tlich Lamkoemec Duneucec Kotoponi Lineucec Larych Beussaicec 
+		}
+		military_station_medium = {
+			Ruc Aimh Lomh Loepoess Dachoc Aislairec Biboth Kilych Idaimh Nych Lobitec Fimegaimec Kalyc Dabaimec Losaich Tlaimh Sosiec Spaurh Aimenyrh Snoech Sarrych Tlich Lamkoemec Duneucec Kotoponi Lineucec Larych Beussaicec 
+		}
+		military_station_large = {
+			Ruc Aimh Lomh Loepoess Dachoc Aislairec Biboth Kilych Idaimh Nych Lobitec Fimegaimec Kalyc Dabaimec Losaich Tlaimh Sosiec Spaurh Aimenyrh Snoech Sarrych Tlich Lamkoemec Duneucec Kotoponi Lineucec Larych Beussaicec 
+		}	
+	}
+
+	ship_class_names = {
+		generic = {
+			Ittal Nidab Ninki Sidur Mammet Meta Ninli Puaba Etum Nidur Inlit Sabi Artetu Lila Nidab Saba Lisid Arteshki Nannu Ayabis Nocri Lili Nannu Ninla Ayannal Abis Myli Lila Sili Sila Myla Meta Etum Eshkit Ayammeshki Nidur Nidab Ningal Abit Lili Nidur Lili Sila Nisid Ittal Sidur Puaba Nisil Ingal Ninki
+		}		
+	}
+
+	fleet_names = {
+#		random_names = {
+#			"Suthnar's Armada" "Ralpakin's Armada" "Hissnak's Armada" "Galathor's Armada" "Olymac's Armada" "Perek's Armada"
+#		}
+		sequential_name = "%O% Armada"
+	}
+	
+	army_names = {
+		defense_army = {
+			sequential_name = "%O% defence regiment"
+		}
+			
+		assault_army = {
+			sequential_name = "%O% attack regiment"
+		}
+		
+		abh_defense_army = {
+			sequential_name = "%O% defence regiment"
+		}
+			
+		abh_assault_army = {
+			sequential_name = "%O% attack regiment"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% thrall regiment"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% clone regiment"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% robotic regiment"
+		}
+		
+		android_army = {
+			sequential_name = "%O% android regiment"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% psionic regiment"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% alien regiment"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% elite regiment"
+		}
+	}
+		
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+		
+		pc_abh_ring_habitable = {
+			names = {
+				Lamral Duswiel Lomryulal Dueil Lamsar Dubuzel Duasek Debrusc
+			}
+		}
+		
+		pc_abh_habitat = {
+			names = {
+				Ruc Aimh Lomh Loepoess Dachoc Aislairec Biboth Kilych Idaimh Nych Lobitec Fimegaimec Kalyc Dabaimec Losaich Tlaimh Sosiec Spaurh Aimenyrh Snoech Sarrych Tlich Lamkoemec Duneucec Kotoponi Lineucec Larych Beussaicec
+			}
+		}
+		
+		pc_imperial_habitat = {
+			names = {
+				Ruc Aimh Lomh Loepoess Dachoc Aislairec Biboth Kilych Idaimh Nych Lobitec Fimegaimec Kalyc Dabaimec Losaich Tlaimh Sosiec Spaurh Aimenyrh Snoech Sarrych Tlich Lamkoemec Duneucec Kotoponi Lineucec Larych Beussaicec
+			}
+		}
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		names1 = {
+			first_names_male = {
+				Suidhordraug Laritheth Gwefayonien Gilthoreus Teyan Naradur Faeron Morsidhion Aththordas Limdur Baramenion Erudil Falasgoldas Sadron Maldaer Anaran Tharonion Polennefinthor Cerelaeil Suiaron Elbaradcon Laerildil Melhasdoron Arandor Lanibion Mortorcon Celeion Erudauguth Saelyan Balagadron Raegion Calaost Saeldan Tidurron Manion Arsathas Aelion Iauron Taenir Imtolon Eruondon Morrinion Neurdion Neurian Arnoion Horthdur Vaniyan Taurwelvorien Bellaerion Calaion Veryarauthion Labellatan Tasidhien Erutoldon Tidaugion Rilon Agoranon Nimlassion Gleinaadthor Draugmenon Daeron Airarond Kiirron Athlaeond Ormollon Kiirdur Valankanon Alathil Hardagyondur Aranthaadorren Neyonon Gondbund Caunion Idhdorion Kiirien Elion Bellthiion Alion Athiothdil Aranar Laireaphadion Randdur Ormaetur Melthuion Ionion Celeost Lathfalerion Verfaradron Malan Galanion Rochenrond Rinaeron Tamdirion Tharohon Aranien Revhil Hirion Veleolien Tameyien Haraderonan Idhrenlanion Aranion Aemaedhon Hiraias Amonion Throluandur Draugdan Idhnaedhron Arbadon Tidorduil Darlathduil Elbellaon Rincinlenion Tihasdorien Sellion Aranaluionien Talanornion Veryamenion Taaerien Leaauthar Arassion Thowarthion Sidhthanion Alantron Tammeldon Polenronon Doslassas Caranyan Adangalad Nithion Eruanbaon Tamlaithion Celenon Bregritheth Daugyan Tidurmion Gleinawaithion Randdion Hirgos Suiaion Balathonien Galaslanil Jarenestan Jarenmon Emeraran Barasidhion Meltulcril Faetorduil Aernordoron Hothion Lydil Alaion Voronis Verton Veryafindion Nesdhorond Rimaedhien Aladur Istyonien Istsirien Aetimdoran Lithnibion Edenion Veassen Tanion Mangos Cunddaugion Galanan Draugion Eiendorien Aldil Tauradhamuth Alyaphenar Gilvantien Morthanien Vanilas Rimeost Taurmaeion Beryaien Morcaunion Taladerlerion Draugestan Nostiadhon Randion Tanohthor Aerweldolnon Belmaedhion Simthithor Taadhamidan Erufindien Galassion Revis Cilion Rinnordorion Rinsadorion Berfinron Mandur Aladil Erurion Gonddol Dospantien Caunyatar Lyborn Tharmaenen Thargolduil Aealdoan Tayangil Kiirion Llehasyonon Caelglironren Caunmollion Mormaeidan Tidurdor Nostnaeon Tabaraddon Galenohthor Aldhudien Aehasdorton Limdion Roherdhorion Turminaon Temon Elciniion Martherthor Adanion Tambeliil Glendhorion Taldaguionion Aelgalad Neurion Legogos Bercaudad Suiaethon Galyonion Bellcauthor Aenoon Aeadhamion Arthanon Lealaear Suirathtar Tanrathion Rienien Caranmion Glennpantion Taladirron Cerephenthor Marathion Aryangdon Cundnoduil Morthonil Glenniothil Thaldur Nenrond Suiaon Nimiothion Sellglad Gondhil Daugborn Jarenborn Sidhion Cereimion Hothaias Rochenion Teien Draugthal Nimadhamdren Alacion Eruron Caeltherindorion Voronion Lanolion Maerion Drathanon Siaphadon Caladan Erumenian Caunost Morrathdon Eredhton Balabelion Tharpantion Siolion Bellrauthien Eredhar Minpanonnon Limthas Eglerdion Gilthanthor Tannefinron Alminaiion Airacion Calalas Habrision Alabund Arnenas Lyan Tandor Thanyonaion Authost Teion Daugolathnen Aelrond Daerthoreus Landagolon Aranaran Morrathdas Barimon Simaedhdraug Balamelion Meriantien Menasirar Tiththradion Neurdir Thanglad Elluanron Aththuion Eiranton Sidheyede Mincinion Tidurien Cauncion Galenmorthor Valaldorien Eglerron Talaiion Tauriadil Galensathil Rinthaadornen Emerion Taurmaethor Falasmennen Taniion Negadien Almion Belrinion Ainnon Rainyaron Habrisdur Belfindion Meldaugien Cundasten Airthil Galenthradion Limion Aelcion Alyaserion Nibenauthas Ehtohil Elyarion Lanfaradar Tiduran Thalion Elbaradon Velefaradnen Erumaedir
+			}
+			first_names_female = {
+				Erulaniel Caluraiiel Raemaivia Arawen Yathathwen Lairaniel Isnaeiel Eruwen Falthonna Yathbanniel Eruadhiel Anenesiel Medlinniel Aleninalda Aranwen Silessa Veneruia Losidreninwen Renraniel Rainbrethadwen Adthea Galedsathiel Renmaiviel Glanfindwen Daerthoriel Halaariel Raina Ithrinnleryn Eruriel Anistwen Serrennwen Maewethwen Enenthea Rinia Ileniadhnel Cirenathwen Rostiladiel Arateliel Eccaima Ercasseth Dauialia Halailiel Berdathiel Herestiel Ithaliel Saeredra Milaniel Turteruima Rhaladheth Runeryniel Faediriel Vanasidhiel Alestiel Aranrauniel Analaniel Vanavaiel Eccawen Caladhiel Tirethaudeth Eriladda Cuilialya Merbannel Nimdilwen Tirdathya Selstegwen Adonlaththa Haeetheth Daerarya Meriliel Vaniariel Tebrethladwen Mithlotiel Enalothiel Janya Gwiletheth Filraniel Ahgadiriel Calerinsinnel Glanathiel Daerfindiel Anaina Vantithenniel Aenathiel Caladwen Ainreniadhya Reroniel Nionira Aranaurae Amanathiel Filglertithya Rodwen Mariel Nionnel Callimwen Dauminawen Rhaathna Ielliel Bellaitha Merethiel Sabarwen Eccaiel Minuteliel Maearamiriel Renathiel Rinwen Runluiiel Esdrannwen Isladhiel Yathdathiel Quananannthea Ghilanna Merilya Cirelintha Aranlimwen Anadrannwen Cavathea Calglerraiel Glanluiiel Filglersiniel Daersathalda Lona Ainteruiel Faelana Gwillimiel Limodiliel Solormaiiel Marwen Adwen Fillandaaya Mientha Turdothya Silivsidhwen Cirefindwen Aranlothda Filadhiel Selstegima Berraniel Nessmana Merethcath Runliniel Falthonia Vanathiacath Fillanwen Ithlotiel Invaima Islathwen Pedmaiiel Silivauriel Lothiliel Marilwen Rhamaieth Araana Vaniel Caldadoliel Beriwethiel Henidrenladiel Anenesthae Mirwen Araiel Aranedra Vanahiliel Rosrenthennlasa Builinniel Eryawen Eruenintha Fallotna Bronaithia Fineruiel Iathiaiel Aliel Intelna Nessia Nimmarieth Caunanna Inmoriel Enavannyl Erurwen Lostwethiel Losglermaminel Eruiel Aerlinnnyl Nessana Geliriel Adima Eruanna Melthadoliel Mithiana Eseniel Tiralwen Anthea Reneliel Selnathia Anethna Lamananntha Veristhea Erilel Silwen Rainialiel Rainel Taruraiiel Vanidrenladwen Enastegiel Renladhiel Mednennya Medeniel Berduriel Runthorleryn Enadothiel Serlanthea Enaathiel Eruraniel Renelia Aediriel Alaliniel Lauranathiriel Velaladnyl Nimaivleryn Buiariel Daeruialiel Erirwen Tearathennwen Caaliel Janwen Erudnel Aranialwen Panrinnna Gondothwen Nionima Mitheliel Invaniel Aerdirwen Aranistima Lailariel Talawen Airewen Daurenmiriel Islaniel Tierinladiel Cireelewen Glirwen Medassima Galedrahineth Rosmeldaawen Aranima Ancassiel Morpantima Nosethiel Meldothna Noslairiel Findirwen Gwethsarmiriel Saiistiel Tirlanwen Riniel Laiyaviel Anwen Finthoreth Panrenniel Panfainiel Tiretheth Dauthensinwen Araathiel Morrenniel Misiniel Vaniraniel Vanadethleryn Ersuithiel Arada Vaistcath Raeuraiiel Ernostiel Tirassiel Faelwen Saieniel Ghilira Terenadwen Sidhlandirwen Telanraiel Herraniel Buithiaiel Esteruwen Medmoriel Anesmethwen Yathfindya Isluiiel Nimbeniel Rodiel Rodedra Marnel Ahenthirwen Tanna Amaariel Erugobeliel Cirenaeia Maethenladria Ithlinnia Ghilien Maranna Tebreththennya Esananniel Beriwen Marmana Dauendaaiel Amasuitheth Lotheleiel Caeniel Eltarwen Nipantya Maetithennwen Verismara Vanilinniel Ahrenthirwen Runaththa Laurtithenniel Janiel Ahmelmirwen Selathwen Ageniniel Nessima Bertolthia Tirfainiel Alalanrae Eregethia Minudoththea Vanaladiel Rosthaadlasa Aneneth Mirira Gwestthea Melyaiel Vananathalda Maerwen Silmana Nionwen Lamtimiel Velalinniel Enaethwen Melbanniel Maesartithwen Runuraiwen Anesdolliel Melda Mariliel Gonethiel Limoteliel Enaegethiel Maeidrendaawen Vananenneth Nesswen Heraria Ninostiel Venestiel Raeuialia Melnaeleryn Aerathiel
+			}
+			second_names = {
+				"Abriel Nei Dubuzel"
+			}
+			regnal_first_names_male = {
+				Dounei Dougnaa Dusuum Dularz Dusem
+			}
+			regnal_first_names_female = {
+				Lamyuunyu Lamronyu Lamorz Lameimar Ramaj
+			}
+			regnal_second_names = {
+				"Abriel Nei Dubuzel"
+			}
+		}
+
+	}
+}

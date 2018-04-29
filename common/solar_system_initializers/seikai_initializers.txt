@@ -1,0 +1,10 @@
+sord_ring = {
+	name = "Sord Ring"
+	class = sc_sord_ring
+	flags = { sord_ring }					
+	
+	usage_odds = 0
+	max_instances = 13	
+	init_effect = {
+	}	
+}

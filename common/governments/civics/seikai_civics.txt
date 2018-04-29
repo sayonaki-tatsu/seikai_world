@@ -1,0 +1,83 @@
+civic_abriel_domination = {
+	modification = no
+	pickable_at_start = yes
+
+	potential = {
+		ethics = {
+			value = ethic_materialist
+		}
+		ethics = {
+			OR = {
+				value = ethic_militarist
+				value = ethic_pacifist
+			}
+			OR = {
+				value = ethic_egalitarian
+				value = ethic_authoritarian
+			}
+		}		
+	}
+
+	possible = {
+		authority = {
+			OR = {
+				value = auth_abh_empire
+				value = auth_abh_kingdom
+				value = auth_abh_state
+			}
+		}
+	}
+
+	random_weight = { base = 0 }
+
+	has_secondary_species = {	# see game_start.11
+		title = civic_tooltip_abriel_domination_effects
+		traits = {
+			trait = trait_abh_physiology
+			trait = trait_abh_psychology
+		}
+	}
+}
+
+
+civic_abh_society = {
+	modification = no
+	pickable_at_start = yes
+
+	potential = {
+		ethics = {
+			value = ethic_materialist
+		}
+		ethics = {
+			OR = {
+				value = ethic_militarist
+				value = ethic_pacifist
+			}
+			OR = {
+				value = ethic_egalitarian
+				value = ethic_authoritarian
+			}
+		}		
+	}
+
+	possible = {
+		authority = {
+			OR = {
+				value = auth_abh_empire
+				value = auth_abh_kingdom
+				value = auth_abh_state
+			}
+		}
+	}
+
+	random_weight = { base = 0 }
+
+	modifier = {
+		leader_skill_levels = 1 
+		country_leader_pool_size = 1
+#		navy_size_mult = 0.15 
+		ship_fire_rate_mult = 0.08 
+		max_rivalries = 1
+	}
+	can_build_ruler_ship = yes 
+}

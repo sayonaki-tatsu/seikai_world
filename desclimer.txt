@@ -1,0 +1,17 @@
+Here's Humankind Empire of Abh and the whole World of Seikai from Morioka's Seikai series.
+[i]Because the mod is very complex it's not likely to be compatible with others. Some cosmetic mods may be compatible at best.[/i]
+
+In the original series Abh are blue-haired long-living space-dwelling genetically altered humans.
+Mod is progressing along with my skill in modding and with my understanding of the whole system here. And when I have time to do all of it. My first rule is to not add something too time-consuming unless I'm sure it'll work right and is in synth with original. For example, I'm did not even try to add Abriel ears into my previous mod, because giving them to every leader was as wrong as limiting Abriels to leaders only. Therefore, I did not do it until “Synthetic Evolution” mechanics appeared.
+
+[url=http://steamcommunity.com/workshop/filedetails/discussion/945960503/1353742967825236157/]FULL LIST OF FEATURES[/url] and future plans 
+
+[url=http://steamcommunity.com/workshop/filedetails/discussion/945960503/1353742967824293872/]Suggestions[/url] - what to do next?
+
+[url=http://steamcommunity.com/workshop/filedetails/discussion/945960503/1353742967824290891/]Bug reports[/url] - write here if you've seen some strange behaviour of the mod 
+
+What Abh nations lack is a properly configurated AI. It's just a copy of default one which is not quite right for sure. 
+ 
+Actually, I understand that there a lot of holes in the mod still, but I do know myself enough to say: if I would not upload it now, I'll find a reason to postpone publication for another month or two. And so on. Each time it's almost ready for publication, I start another improvement which breaks everything. 
+So, I'm uploading it as is and waiting for your bug reports and commentaries.
+Hopefully, this way I'll be able to polish already present functionality before moving on to next ideas I have.  

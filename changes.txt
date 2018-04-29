@@ -1,0 +1,5 @@
+ - New Authorities - Abh Kingdom is traditional monarchy, while Abh Empire has oligarchic elections
+ - Embracing factions for Abh states now don't change ethos, but give temporary focus modifiers - Ideologies
+ - Resources for Abh megastructures are now taken from system planets gradually (same mechanics as Aggressive Mineral Extraction)
+ - If there's not enough resources, player is prompted to allocate additional minerals for construction
+ - Added Imperial Habitat megastructure which can be built only with Voidborn AP - it's of maximum size and does not decay as common Abh habitats.

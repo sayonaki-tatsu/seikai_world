@@ -1,0 +1,84 @@
+#Humankind Empire of Abh
+"Humankind Empire of Abh"={
+	name="Humankind Empire of Abh"
+	adjective = "Abh"
+	ship_prefix="ISS"
+#	country_type = abh
+
+	name_list = "abriel"
+	species = {
+		class = "ABH"
+		portrait = "abriel"
+		name = "Abriel"
+		plural = "Abriel"
+		adjective = "Abriel"
+		name_list = "abriel"
+		trait = "trait_abh_physiology"
+		trait = "trait_abh_psychology"
+		trait = "trait_abriel_supremacy"
+	}
+	secondary_species = {
+		class = "ABH"
+		portrait = "abh"
+		name = "Abh"
+		plural = "Abh"
+		adjective = "Abh"
+		name_list = "abh_pure"
+		trait="trait_abh_physiology"
+		trait="trait_abh_psychology"
+		trait="trait_nomadic"
+	}
+
+	authority = auth_abh_empire 
+	civics={
+		"civic_abriel_domination"
+		"civic_abh_society"
+	}	
+	government = gov_abh_empire 
+
+	ethic="ethic_egalitarian"
+	ethic="ethic_militarist"
+	ethic="ethic_materialist"
+
+	flags = { abh_empire custom_start_screen }
+
+	planet_name="Abriel"
+	planet_class="pc_abh_habitat"
+	initializer = "lakfakalle"
+	system_name="Lakfakalle"
+
+	graphical_culture="molluscoid_01"
+	city_graphical_culture="molluscoid_01"
+	
+
+	empire_flag = {
+		icon= {
+			category = "abh"
+			file = "flag_abh_1.dds"
+		}
+		background= {
+			category = "backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"black"
+			"purple"
+			"null"
+			"null"
+		}
+	}
+
+	ruler={
+		gender=male
+		name="Dounei Abriel"
+		portrait="abriel_male"
+		texture=0
+		hair=4
+		clothes=1
+	}
+
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="ethic_spaceship_room"
+	spawn_enabled=no
+}

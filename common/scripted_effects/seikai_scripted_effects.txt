@@ -1,0 +1,1044 @@
+create_abh_species = {
+	create_species = {
+		name = "Abh"
+		plural = "Abh"
+		adjective = "Abh"
+		name_list = "abh_pure"
+		class = "ABH"
+		portrait = "abh"
+		traits = {
+			trait = trait_pc_abh_habitat_preference
+			trait = trait_abh_physiology
+			trait = trait_abh_psychology
+		}
+		homeworld = event_target:abriel_habitat
+		pops_auto_growth = 1.0
+		pops_can_be_colonizers = yes
+		pops_can_migrate = yes
+		pops_can_reproduce = yes
+		pops_can_join_factions = yes
+		can_generate_leaders = yes
+		pops_can_be_slaves = no
+		can_be_modified = no
+		pops_have_happiness = yes
+		#	pop_ethics =  { ethic_egalitarian ethic_materialist ethic_militarist }
+	}
+	last_created_species = {
+		save_global_event_target_as = abh_species_b
+	}
+	modify_species = { 
+		species = event_target:abh_species_b
+		add_trait = trait_new_blood
+	}
+	last_created_species = {
+		rename_species = {
+			name = "Abh"
+			name_list = "abh_mixed"
+		}
+		save_global_event_target_as = abh_species_a
+	}
+	modify_species = { 
+		species = event_target:abh_species_b
+		add_trait = trait_abriel_supremacy
+		portrait = "abriel"
+	}
+	last_created_species = {
+		rename_species = {
+			name = "Abriel"
+			name_list = "abriel"
+		}
+		save_global_event_target_as = abriel_species
+	}
+	modify_species = { 
+		species = event_target:abh_species_b
+		remove_trait = trait_abh_physiology
+		portrait = "human"
+	}
+	last_created_species = {
+		rename_species = {
+			name = "Imperial Citizen"
+			name_list = "HUM"
+		}
+		save_global_event_target_as = imperial_species_b
+	}
+	modify_species = { 
+		species = event_target:imperial_species_b
+		add_trait = trait_new_blood
+		portrait = "human"
+	}
+	last_created_species = {
+		save_global_event_target_as = imperial_species_a
+	}
+}
+
+change_species_to_abriel = {
+	if = { 
+		limit = {
+			owner = {
+				is_species_class = ABH
+			}
+		}
+		change_species = owner
+	}
+}
+
+change_species_to_abh = {
+	if = {
+		limit = {
+			owner = {
+				abh_species_has_new_blood = yes
+			}	
+		}
+		change_species = event_target:abh_species_a
+		else = {
+			change_species = event_target:abh_species_b
+		}
+	}
+}
+
+change_species_to_imperial = {
+	if = {
+		limit = {
+			owner = {
+				imperial_species_has_new_blood = yes
+			}	
+		}
+		change_species = event_target:imperial_species_a
+		else = {
+			change_species = event_target:imperial_species_b
+		}
+	}
+}
+
+change_pops_to_abh = {
+	every_owned_pop = {
+		limit = {
+			species = {
+				species_is_abriel = yes
+			}
+		}
+		change_species_to_abriel = yes
+	}
+	every_owned_pop = {
+		limit = {
+			species = {
+				species_is_abh = yes
+			}
+		}
+		change_species_to_abh = yes
+	}
+	every_owned_pop = {
+		limit = {
+			species = {
+				species_is_imperial = yes
+			}
+		}
+		change_species_to_imperial = yes
+	}
+}
+
+count_citizen_pops = {
+	owner = {
+		set_variable = {
+			which = abriel_count
+			value = 0
+		}
+		set_variable = {
+			which = abh_count
+			value = 0
+		}
+		set_variable = {
+			which = imperial_count
+			value = 0
+		}
+		every_owned_pop = {
+			limit = {
+				species_is_abriel = yes
+			}
+			owner = {
+				change_variable = {
+					which = abriel_count
+					value = 1
+				}
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				species_is_abh = yes
+			}
+			owner = {
+				change_variable = {
+					which = abh_count
+					value = 1
+				}
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				species_is_imperial = yes
+			}
+			owner = {
+				change_variable = {
+					which = imperial_count
+					value = 1
+				}
+			}
+		}
+	}
+	owner = {
+		if = {
+			limit = {
+				check_variable = {
+					which = abriel_count
+					value < 512
+				}
+			}
+			set_variable = {
+				which = abriel_count9
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abriel_count9
+					value = 1
+				}
+				subtract_variable = {
+					which = abriel_count
+					value = 512
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abriel_count
+					value < 256
+				}
+			}
+			set_variable = {
+				which = abriel_count8
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abriel_count8
+					value = 1
+				}
+				subtract_variable = {
+					which = abriel_count
+					value = 256
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abriel_count
+					value < 128
+				}
+			}
+			set_variable = {
+				which = abriel_count7
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abriel_count7
+					value = 1
+				}
+				subtract_variable = {
+					which = abriel_count
+					value = 128
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abriel_count
+					value < 64
+				}
+			}
+			set_variable = {
+				which = abriel_count6
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abriel_count6
+					value = 1
+				}
+				subtract_variable = {
+					which = abriel_count
+					value = 64
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abriel_count
+					value < 32
+				}
+			}
+			set_variable = {
+				which = abriel_count5
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abriel_count5
+					value = 1
+				}
+				subtract_variable = {
+					which = abriel_count
+					value = 32
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abriel_count
+					value < 16
+				}
+			}
+			set_variable = {
+				which = abriel_count4
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abriel_count4
+					value = 1
+				}
+				subtract_variable = {
+					which = abriel_count
+					value = 16
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abriel_count
+					value < 8
+				}
+			}
+			set_variable = {
+				which = abriel_count3
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abriel_count3
+					value = 1
+				}
+				subtract_variable = {
+					which = abriel_count
+					value = 8
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abriel_count
+					value < 4
+				}
+			}
+			set_variable = {
+				which = abriel_count2
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abriel_count2
+					value = 1
+				}
+				subtract_variable = {
+					which = abriel_count
+					value = 4
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abriel_count
+					value < 2
+				}
+			}
+			set_variable = {
+				which = abriel_count1
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abriel_count1
+					value = 1
+				}
+				subtract_variable = {
+					which = abriel_count
+					value = 2
+				}
+			}
+		}
+	}
+	owner = {
+		if = {
+			limit = {
+				check_variable = {
+					which = abh_count
+					value < 512
+				}
+			}
+			set_variable = {
+				which = abh_count9
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abh_count9
+					value = 1
+				}
+				subtract_variable = {
+					which = abh_count
+					value = 512
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abh_count
+					value < 256
+				}
+			}
+			set_variable = {
+				which = abh_count8
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abh_count8
+					value = 1
+				}
+				subtract_variable = {
+					which = abh_count
+					value = 256
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abh_count
+					value < 128
+				}
+			}
+			set_variable = {
+				which = abh_count7
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abh_count7
+					value = 1
+				}
+				subtract_variable = {
+					which = abh_count
+					value = 128
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abh_count
+					value < 64
+				}
+			}
+			set_variable = {
+				which = abh_count6
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abh_count6
+					value = 1
+				}
+				subtract_variable = {
+					which = abh_count
+					value = 64
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abh_count
+					value < 32
+				}
+			}
+			set_variable = {
+				which = abh_count5
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abh_count5
+					value = 1
+				}
+				subtract_variable = {
+					which = abh_count
+					value = 32
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abh_count
+					value < 16
+				}
+			}
+			set_variable = {
+				which = abh_count4
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abh_count4
+					value = 1
+				}
+				subtract_variable = {
+					which = abh_count
+					value = 16
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abh_count
+					value < 8
+				}
+			}
+			set_variable = {
+				which = abh_count3
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abh_count3
+					value = 1
+				}
+				subtract_variable = {
+					which = abh_count
+					value = 8
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abh_count
+					value < 4
+				}
+			}
+			set_variable = {
+				which = abh_count2
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abh_count2
+					value = 1
+				}
+				subtract_variable = {
+					which = abh_count
+					value = 4
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = abh_count
+					value < 2
+				}
+			}
+			set_variable = {
+				which = abh_count1
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = abh_count1
+					value = 1
+				}
+				subtract_variable = {
+					which = abh_count
+					value = 2
+				}
+			}
+		}
+	}
+	owner = {
+		if = {
+			limit = {
+				check_variable = {
+					which = imperial_count
+					value < 512
+				}
+			}
+			set_variable = {
+				which = imperial_count9
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = imperial_count9
+					value = 1
+				}
+				subtract_variable = {
+					which = imperial_count
+					value = 512
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = imperial_count
+					value < 256
+				}
+			}
+			set_variable = {
+				which = imperial_count8
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = imperial_count8
+					value = 1
+				}
+				subtract_variable = {
+					which = imperial_count
+					value = 256
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = imperial_count
+					value < 128
+				}
+			}
+			set_variable = {
+				which = imperial_count7
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = imperial_count7
+					value = 1
+				}
+				subtract_variable = {
+					which = imperial_count
+					value = 128
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = imperial_count
+					value < 64
+				}
+			}
+			set_variable = {
+				which = imperial_count6
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = imperial_count6
+					value = 1
+				}
+				subtract_variable = {
+					which = imperial_count
+					value = 64
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = imperial_count
+					value < 32
+				}
+			}
+			set_variable = {
+				which = imperial_count5
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = imperial_count5
+					value = 1
+				}
+				subtract_variable = {
+					which = imperial_count
+					value = 32
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = imperial_count
+					value < 16
+				}
+			}
+			set_variable = {
+				which = imperial_count4
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = imperial_count4
+					value = 1
+				}
+				subtract_variable = {
+					which = imperial_count
+					value = 16
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = imperial_count
+					value < 8
+				}
+			}
+			set_variable = {
+				which = imperial_count3
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = imperial_count3
+					value = 1
+				}
+				subtract_variable = {
+					which = imperial_count
+					value = 8
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = imperial_count
+					value < 4
+				}
+			}
+			set_variable = {
+				which = imperial_count2
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = imperial_count2
+					value = 1
+				}
+				subtract_variable = {
+					which = imperial_count
+					value = 4
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = imperial_count
+					value < 2
+				}
+			}
+			set_variable = {
+				which = imperial_count1
+				value = 0
+			}
+			else = {
+				set_variable = {
+					which = imperial_count1
+					value = 1
+				}
+				subtract_variable = {
+					which = imperial_count
+					value = 2
+				}
+			}
+		}
+	}
+}
+
+convert_leader_into_abh = {
+	count_citizen_pops = yes
+	if = {
+		limit = {
+			leader_class = ruler
+		}
+		change_species_to_abriel = yes
+		else = {
+			random_list = {
+				1 = {
+					modifier = {
+						owner = { check_variable = { which = abriel_count1 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abriel_count2 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abriel_count3 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abriel_count4 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abriel_count5 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abriel_count6 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abriel_count7 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abriel_count8 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abriel_count9 value > 0 } }
+						factor = 2
+					}
+					change_species_to_abriel = yes
+				}
+				1 = {
+					modifier = {
+						OR = {
+							AND = {
+								leader_class = governor
+								owner = {
+									NOT = {
+										any_pool_leader = {
+											leader_class = governor
+											species = {
+												species_is_abriel = yes
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								leader_class = scientist
+								owner = {
+									NOT = {
+										any_pool_leader = {
+											leader_class = scientist
+											species = {
+												species_is_abriel = yes
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								leader_class = admiral
+								owner = {
+									NOT = {
+										any_pool_leader = {
+											leader_class = admiral
+											species = {
+												species_is_abriel = yes
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								leader_class = general
+								owner = {
+									NOT = {
+										any_pool_leader = {
+											leader_class = general
+											species = {
+												species_is_abriel = yes
+											}
+										}
+									}
+								}
+							}
+						}
+						factor = 0
+					}
+					modifier = {
+						owner = { check_variable = { which = abh_count1 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abh_count2 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abh_count3 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abh_count4 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abh_count5 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abh_count6 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abh_count7 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abh_count8 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = abh_count9 value > 0 } }
+						factor = 2
+					}
+					change_species_to_abh = yes
+				}
+				1 = {
+					modifier = {
+						OR = {
+							AND = {
+								leader_class = governor
+								owner = {
+									NOT = {
+										any_pool_leader = {
+											leader_class = governor
+											species = {
+												species_is_abriel = yes
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								leader_class = scientist
+								owner = {
+									NOT = {
+										any_pool_leader = {
+											leader_class = scientist
+											species = {
+												species_is_abriel = yes
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								leader_class = admiral
+								owner = {
+									NOT = {
+										any_pool_leader = {
+											leader_class = admiral
+											species = {
+												species_is_abriel = yes
+											}
+										}
+									}
+								}
+							}
+							AND = {
+								leader_class = general
+								owner = {
+									NOT = {
+										any_pool_leader = {
+											leader_class = general
+											species = {
+												species_is_abriel = yes
+											}
+										}
+									}
+								}
+							}
+						}
+						factor = 0
+					}
+					modifier = {
+						owner = {
+							NOT = {
+								any_owned_pop = {
+									species_is_imperial = yes
+								}
+							}
+						}
+						factor = 0
+					}
+					modifier = {
+						owner = { check_variable = { which = imperial_count1 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = imperial_count2 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = imperial_count3 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = imperial_count4 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = imperial_count5 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = imperial_count6 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = imperial_count7 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = imperial_count8 value > 0 } }
+						factor = 2
+					}
+					modifier = {
+						owner = { check_variable = { which = imperial_count9 value > 0 } }
+						factor = 2
+					}
+					change_species_to_imperial = yes
+				}
+			}
+		}
+	}
+	set_name = random
+}
